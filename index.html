@@ -335,6 +335,29 @@
             color: #764ba2;
         }
 
+        /* Technology Tags */
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .tech-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
         /* Experience Section */
         .experience-content {
             max-width: 800px;
@@ -628,7 +651,12 @@
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">🎮</div>
+                    <div class="project-image">
+                        <video width="100%" height="100%" controls style="object-fit: cover; border-radius: 15px 15px 0 0;">
+                            <source src="assets/camel-caravan-clip.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                     <div class="project-content">
                         <h3>Camel Caravan</h3>
                         <p>A console-based strategy game inspired by Slay the Spire. You play as a caravan of camels
@@ -637,10 +665,21 @@
                             programming environment.</p>
                         <a href="https://github.com/harveyzhu27/camel_caravan" target="_blank" class="project-link">View
                             Project →</a>
+                        <div class="tech-tags">
+                            <span class="tech-tag">OCaml</span>
+                            <span class="tech-tag">Functional Programming</span>
+                            <span class="tech-tag">Console Game</span>
+                            <span class="tech-tag">Strategy</span>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">🔥</div>
+                    <div class="project-image">
+                        <video width="100%" height="100%" controls style="object-fit: cover; border-radius: 15px 15px 0 0;">
+                            <source src="assets/gilded-flame-trailer.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                     <div class="project-content">
                         <h3>Gilded Flame</h3>
                         <p>A 2D puzzle-platformer where players carry a single flame through a dark world. The gameplay
@@ -649,6 +688,35 @@
                             Spring Game Showcase.</p>
                         <a href="https://github.com/harveyzhu27/Gilded-Flame" target="_blank" class="project-link">View
                             Project →</a>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">LibGDX</span>
+                            <span class="tech-tag">Box2D</span>
+                            <span class="tech-tag">Game Development</span>
+                            <span class="tech-tag">2D Platformer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <video width="100%" height="100%" controls style="object-fit: cover; border-radius: 15px 15px 0 0;">
+                            <source src="assets/ai-voice-assistant-clip.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Customer Service Bot</h3>
+                        <p>AI-powered customer support system with web scraping, RAG for accurate responses, and voice/text chat via VAPI.ai. Built with Next.js, Python, OpenAI API, and Pinecone vector database.</p>
+                        <a href="https://github.com/harveyzhu27/ai-customer-support" target="_blank" class="project-link">View Project →</a>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenAI API</span>
+                            <span class="tech-tag">VAPI.ai</span>
+                            <span class="tech-tag">Pinecone</span>
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
@@ -660,6 +728,13 @@
                             long-term goals by offering structured task planning and insight into daily habits.</p>
                         <a href="https://github.com/harveyzhu27/TAKO" target="_blank" class="project-link">View Project
                             →</a>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Productivity Tool</span>
+                            <span class="tech-tag">Task Management</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -677,17 +752,17 @@
                     <div class="skill-card">
                         <div class="skill-icon">🛠️</div>
                         <h3>Tools & Frameworks</h3>
-                        <p>React, Flask, Firebase, LibGDX, Box2D, Docker, Git</p>
+                        <p>React, Next.js, Flask, Firebase, LibGDX, Box2D, Docker, Git, Supabase</p>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">📚</div>
-                        <h3>Libraries</h3>
-                        <p>TensorFlow.js, NumPy, Pandas</p>
+                        <h3>Libraries & APIs</h3>
+                        <p>TensorFlow.js, NumPy, Pandas, OpenAI API, VAPI.ai, Pinecone</p>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">🎨</div>
                         <h3>Design & Dev Tools</h3>
-                        <p>Figma, VS Code, IntelliJ, Postman</p>
+                        <p>Figma, VS Code, IntelliJ, Postman, Tailwind CSS</p>
                     </div>
                 </div>
             </div>
@@ -698,11 +773,20 @@
             <div class="experience-content">
                 <div class="experience-item">
                     <div class="experience-header">
-                        <h3>Intern at Teidore</h3>
-                        <span class="experience-date">2025 – Present</span>
+                        <h3>Full Stack Software Engineer Intern at Teidore</h3>
+                        <span class="experience-date">Jun 2025 – Present</span>
                     </div>
-                    <p>Working as an intern at Teidore, contributing to various development projects and gaining
-                        hands-on experience in professional software development environments.</p>
+                    <p>Developed AI-powered automation systems using OpenAI APIs, Ollama, and BERT for product tagging and schema mapping. Built ETL pipelines with Selenium and Beautiful Soup for large-scale e-commerce data processing and optimized Supabase SQL queries for improved search performance. Implemented LLM/NLP solutions and led UX improvements and backend architecture enhancements.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">OpenAI API</span>
+                        <span class="tech-tag">Ollama</span>
+                        <span class="tech-tag">BERT</span>
+                        <span class="tech-tag">Selenium</span>
+                        <span class="tech-tag">Beautiful Soup</span>
+                        <span class="tech-tag">ETL</span>
+                        <span class="tech-tag">Supabase</span>
+                        <span class="tech-tag">LLM/NLP</span>
+                    </div>
                 </div>
                 <div class="experience-item">
                     <div class="experience-header">
@@ -712,6 +796,13 @@
                     <p>Coordinated a 9-person team throughout development, milestone planning, and final showcase
                         presentation. Successfully led the project to completion and presentation at Cornell's Spring
                         Game Showcase.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Project Leadership</span>
+                        <span class="tech-tag">Team Coordination</span>
+                        <span class="tech-tag">Game Development</span>
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">LibGDX</span>
+                    </div>
                 </div>
             </div>
         </section>
