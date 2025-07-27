@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .section-title {
+    @apply text-center text-4xl font-bold mb-12 text-gray-800 relative;
+  }
+
+  .section-title::after {
+    content: '';
+    @apply absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 rounded;
+  }
+
+  .tech-tags {
+    @apply flex flex-wrap gap-2 mt-4;
+  }
+
+  .tech-tag {
+    @apply bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg;
+  }
+
+  .project-card {
+    @apply bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .experience-item {
+    @apply bg-white p-8 rounded-2xl shadow-lg mb-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl relative overflow-hidden;
+  }
+
+  .experience-item::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 to-secondary-500;
+  }
+
+  .skill-card {
+    @apply bg-white p-8 rounded-2xl text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl relative overflow-hidden;
+  }
+
+  .skill-card::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 to-secondary-500;
+  }
+
+  .cta-button {
+    @apply bg-white/20 text-white px-8 py-4 border-2 border-white rounded-full no-underline font-bold transition-all duration-300 opacity-0 animate-fade-in-up;
+  }
+
+  .cta-button:hover {
+    @apply bg-white text-primary-500 -translate-y-0.5 shadow-xl;
+  }
+} 
