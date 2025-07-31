@@ -29,6 +29,11 @@ const Hero: React.FC = () => {
                 src="/assets/1749497469839.jpg" 
                 alt="Harvey Zhu"
                 className="w-full h-full rounded-full object-cover"
+                onError={(e) => {
+                  console.error('Image failed to load:', e);
+                  // Fallback to a placeholder or different path
+                  e.currentTarget.src = '/assets/1749497469839.jpg';
+                }}
               />
             </div>
           </motion.div>
