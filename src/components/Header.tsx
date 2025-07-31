@@ -41,13 +41,13 @@ const Header: React.FC = () => {
           Harvey Zhu
         </motion.a>
         <ul className="flex gap-8 list-none">
-          {['projects', 'skills', 'experience', 'education', 'contact'].map((item) => (
+          {['projects', 'skills', 'experience', 'education-contact'].map((item) => (
             <motion.li key={item}>
               <button
                 onClick={() => scrollToSection(item)}
                 className="relative transition-colors duration-300 hover:text-primary-300"
               >
-                {item.charAt(0).toUpperCase() + item.slice(1)}
+                {item === 'education-contact' ? 'Contact' : item.charAt(0).toUpperCase() + item.slice(1)}
                 <span className="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </button>
             </motion.li>
