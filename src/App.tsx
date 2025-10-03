@@ -45,7 +45,7 @@ const App: React.FC = () => {
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Outside of tech, I enjoy <strong>chess</strong>, <strong>basketball</strong>, and 
-                  <strong>drawing</strong>, all of which inspire how I think about strategy, aesthetics, and user
+                  <strong> drawing</strong>, all of which inspire how I think about strategy, aesthetics, and user
                   experience.
                 </p>
               </motion.div>
@@ -190,9 +190,9 @@ const App: React.FC = () => {
                 ))}
               </div>
 
-              {/* Leadership Experience Column */}
+              {/* School Experience Column */}
               <div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Leadership</h3>
+                <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">School</h3>
                 {leadership.map((experience, index) => (
                   <motion.div
                     key={experience.id}
@@ -267,35 +267,6 @@ const App: React.FC = () => {
                      </div>
                    )}
 
-                   {education.teachingAssistant && (
-                     <div className="mb-6">
-                       <h5 className="text-lg font-semibold text-gray-700 mb-2">{education.teachingAssistant.role}</h5>
-                       <p className="text-sm text-gray-600 mb-3">{education.teachingAssistant.dates}</p>
-                       <ul className="text-sm text-gray-600 space-y-1">
-                         {education.teachingAssistant.responsibilities.map((resp, index) => (
-                           <li key={index} className="flex items-start">
-                             <span className="text-primary-500 mr-2">•</span>
-                             {resp}
-                           </li>
-                         ))}
-                       </ul>
-                     </div>
-                   )}
-
-                   {education.researchAssistant && (
-                     <div>
-                       <h5 className="text-lg font-semibold text-gray-700 mb-2">{education.researchAssistant.role}</h5>
-                       <p className="text-sm text-gray-600 mb-3">{education.researchAssistant.dates}</p>
-                       <ul className="text-sm text-gray-600 space-y-1">
-                         {education.researchAssistant.responsibilities.map((resp, index) => (
-                           <li key={index} className="flex items-start">
-                             <span className="text-primary-500 mr-2">•</span>
-                             {resp}
-                           </li>
-                         ))}
-                       </ul>
-                     </div>
-                   )}
                  </motion.div>
               </div>
 

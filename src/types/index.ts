@@ -34,16 +34,6 @@ export interface Education {
   gpa?: string;
   date: string;
   relevantCoursework?: string[];
-  teachingAssistant?: {
-    role: string;
-    dates: string;
-    responsibilities: string[];
-  };
-  researchAssistant?: {
-    role: string;
-    dates: string;
-    responsibilities: string[];
-  };
 }
 
 export interface Contact {

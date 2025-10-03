@@ -70,10 +70,26 @@ export const experiences: Experience[] = [
 
 export const leadership: Experience[] = [
   {
+    id: 'teaching-assistant',
+    title: 'Teaching Assistant – Data Structures & Functional Programming',
+    company: 'Cornell University',
+    date: 'Aug 2025 – Present',
+    description: 'Lead discussion sessions for 40+ students and hold weekly office hours for 30+ students. Collaborate with professor on assignments, projects, and exams. Assist students via Ed Discussion forums to ensure comprehensive understanding of core computer science concepts.',
+    technologies: ['Teaching', 'Student Mentoring', 'Course Development', 'Educational Technology', 'Problem Solving', 'Communication']
+  },
+  {
+    id: 'research-assistant',
+    title: 'Research Assistant – Cornell SC Johnson College of Business',
+    company: 'Cornell University',
+    date: 'Aug 2025 – Present',
+    description: 'Building a full-stack Beer Game for supply chain simulation with backend and interactive frontend. Developing AI agents and integrating LLMs for strategy analysis and decision emulation to enhance supply chain management education and research.',
+    technologies: ['Full-Stack Development', 'AI/ML', 'LLM Integration', 'Supply Chain Simulation', 'Research', 'Game Development']
+  },
+  {
     id: 'chess-tournament-lead',
-    title: 'Tournament Lead',
-    company: 'Cornell Chess Club',
-    date: 'Cornell University',
+    title: 'Tournament Lead – Cornell Chess Club',
+    company: 'Cornell University',
+    date: 'Aug 2025 – Present',
     description: 'Managed tournament logistics and team coordination for national events including Pan American Collegiate, Inter Ivy, and Amateur Team East. Responsibilities included promoting tournaments, handling registrations and USCF compliance, coordinating travel and lodging, and serving as the primary liaison with tournament organizers to ensure smooth participation and reimbursement processes.',
     technologies: ['Event Management', 'Logistics Coordination', 'Team Leadership', 'USCF Compliance', 'Travel Planning', 'Budget Management']
   }
@@ -128,25 +144,7 @@ export const education: Education = {
     'Discrete Structures',
     'Linear Algebra',
     'Probability Models and Inference'
-  ],
-  teachingAssistant: {
-    role: 'Teaching Assistant – Data Structures & Functional Programming',
-    dates: 'Aug 2025 – Present',
-    responsibilities: [
-      'Lead discussion sessions for 40+ students',
-      'Hold weekly office hours for 30+ students',
-      'Collaborate with professor on assignments, projects, and exams',
-      'Assist students via Ed Discussion forums'
-    ]
-  },
-  researchAssistant: {
-    role: 'Research Assistant – Cornell SC Johnson College of Business',
-    dates: 'Sept 2025 – Present',
-    responsibilities: [
-      'Building a full-stack Beer Game for supply chain simulation with backend and interactive frontend',
-      'Developing AI agents and integrating LLMs for strategy analysis and decision emulation'
-    ]
-  }
+  ]
 };
 
 export const contact: Contact = {

@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
           >
             <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center shadow-2xl floating-animation pulse-glow">
               <img 
-                src="/assets/headshot_prof.JPEG" 
+                src="/assets/headshot_copy.JPEG" 
                 alt="Harvey Zhu"
                 className="w-full h-full rounded-full object-cover"
                 onError={(e) => {
