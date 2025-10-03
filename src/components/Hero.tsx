@@ -12,7 +12,8 @@ const Hero: React.FC = () => {
   return (
     <section className="h-screen flex items-center justify-center text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-secondary-500">
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent"></div>
       </div>
       
       <div className="container relative z-10">
@@ -24,14 +25,14 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center shadow-2xl">
+            <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center shadow-2xl floating-animation pulse-glow">
               <img 
-                src="/assets/1749497469839.jpg" 
+                src="/assets/headshot_prof.JPEG" 
                 alt="Harvey Zhu"
                 className="w-full h-full rounded-full object-cover"
                 onError={(e) => {
                   console.error('Image failed to load:', e);
-                  // Fallback to a placeholder or different path
+                  // Fallback to the old image
                   e.currentTarget.src = '/assets/1749497469839.jpg';
                 }}
               />

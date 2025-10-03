@@ -24,9 +24,9 @@ const Header: React.FC = () => {
     <motion.header
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-white/95 text-gray-800' 
+          ? 'bg-white/95 text-gray-800 shadow-lg' 
           : 'bg-white/10 text-white'
-      } backdrop-blur-md border-b border-white/20`}
+      } backdrop-blur-md border-b border-white/20 glass-effect`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}

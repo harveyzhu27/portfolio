@@ -18,19 +18,19 @@ export const projects: Project[] = [
     technologies: ['Java', 'LibGDX', 'Box2D', 'Game Development', '2D Platformer']
   },
   {
-    id: 'ai-customer-service',
-    title: 'AI Customer Service Bot',
-    description: 'A full‑stack AI customer support platform with real‑time voice conversations, semantic search, and context‑aware responses. Combines Vapi AI for voice, OpenAI for NLP, and Pinecone for vector search to deliver intelligent, source‑attributed answers with live transcription and a modern, responsive Next.js frontend.',
+    id: 'voice-support-chatbot',
+    title: 'Voice-Enabled Support Chatbot',
+    description: 'Developed AI assistant with GPT-3.5, Pinecone embeddings, and confidence scoring. Implemented real-time voice interaction using Vapi and WebRTC. Created transcript processing pipeline for context-aware FAQ retrieval with intelligent, source-attributed answers.',
     githubUrl: 'https://github.com/harveyzhu27/ai-customer-support',
     videoUrl: '/assets/ai-voice-assistant-clip.mp4',
-    technologies: ['Next.js', 'Python', 'OpenAI API', 'VAPI.ai', 'Pinecone', 'RAG', 'Tailwind CSS']
+    technologies: ['TypeScript', 'Next.js', 'React', 'Pinecone', 'Vapi', 'WebRTC', 'GPT-3.5', 'Real-time Processing']
   },
   {
-    id: 'ai-database-sub-agent',
-    title: 'AI Database Sub-agent',
-    description: 'A CLI‑driven tool that converts natural language requests into database schemas, API routes, and frontend components, fully automating feature creation for Next.js projects. Integrates PostgreSQL, Drizzle ORM, and React 19 to streamline database management and end‑to‑end app functionality.',
-    githubUrl: 'https://github.com/harveyzhu27/ai-database-sub-agent',
-    technologies: ['CLI', 'PostgreSQL', 'Drizzle ORM', 'React 19', 'Next.js', 'TypeScript', 'Database Automation']
+    id: 'database-management-cli',
+    title: 'Database Management CLI Tool',
+    description: 'Built CLI tool for schema generation, migrations, and routes. Automated backend integration with Drizzle ORM + PostgreSQL. Integrated OpenAI NLP to parse natural language into structured DB operations, fully automating feature creation for Next.js projects.',
+    githubUrl: 'https://github.com/harveyzhu27/database-subagent',
+    technologies: ['TypeScript', 'PostgreSQL', 'Next.js', 'Drizzle ORM', 'CLI', 'OpenAI NLP', 'Database Automation']
   },
   {
     id: 'tako',
@@ -43,32 +43,32 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
   {
-    id: 'teidore',
-    title: 'Full Stack Software Engineer Intern',
-    company: 'Teidore',
-    date: 'Jun 2025 – Present',
-    description: 'At Teidore, I develop AI/ML‑powered product tagging and compatibility systems using OpenAI APIs, Ollama, and BERT, improving data categorization and query speed. I design ETL pipelines and AWS ingestion workflows that scrape, normalize, and store large‑scale e‑commerce data in S3/RDS, with reusable schemas and cost‑aware architecture. I also refactor Supabase SQL queries to enhance advanced search performance and lead UX/performance improvements on user‑facing aerospace pages.',
-    technologies: ['OpenAI API', 'Ollama', 'BERT', 'AWS', 'S3', 'RDS', 'ETL', 'Supabase', 'LLM/NLP']
+    id: 'hawl-technologies',
+    title: 'Software Engineering Intern, Technical Lead',
+    company: 'Hawl Technologies',
+    date: 'Aug 2025 – Sept 2025',
+    description: 'Directed development of AI-powered enterprise search platform combining retrieval from 140+ trusted sources with multi-stage validation. Implemented secure RESTful API with JWT + user-provided key authentication, real-time streaming, and analytics. Engineered MongoDB Atlas schema with JSON validation, compound indexing, and encryption-at-rest.',
+    technologies: ['AI/ML', 'RESTful API', 'JWT Authentication', 'MongoDB Atlas', 'Real-time Streaming', 'Enterprise Search', 'Data Validation']
   },
   {
-    id: 'hawl-technologies',
-    title: 'AI & CS Intern',
-    company: 'Hawl Technologies',
-    date: '2024 – Present',
-    description: 'I contribute to building an AI memory platform that aggregates data from multiple AI tools for fast, context‑aware search and retrieval. My work spans vector databases, data scrapers, and authentication/payment system design, with a focus on local storage security and future cloud migration to enable a scalable and secure AI experience.',
-    technologies: ['AI/ML', 'Vector Databases', 'Data Scraping', 'Authentication', 'Payment Systems', 'Local Storage', 'Cloud Migration']
+    id: 'teidore',
+    title: 'Software Engineering Intern',
+    company: 'Teidore',
+    date: 'Jun 2025 – Sept 2025',
+    description: 'Deployed automated CI/CD pipelines on AWS Amplify, EC2, and CloudWatch. Designed Python ETL pipeline migrating retailer data from AWS S3 to PostgreSQL RDS at 5,000+ records/min. Redesigned e-commerce schema with hierarchical categories and materialized views, reducing query latency by 40%. Built AI/ML pipelines with BERT and Ollama, improving classification accuracy by 125%.',
+    technologies: ['AWS', 'CI/CD', 'Python ETL', 'PostgreSQL', 'S3', 'RDS', 'BERT', 'Ollama', 'CloudWatch', 'Schema Design']
+  },
+  {
+    id: 'gilded-flame',
+    title: 'Project Lead, Programmer, Artist',
+    company: 'Gilded Flame',
+    date: 'Jan 2025 – May 2025',
+    description: 'Led 9-person team to build a game with dynamic lighting, AI-driven enemies, and puzzle logic. Resolved production challenges and kept milestones on track. Presented final game to 150+ attendees at Cornell\'s GDIAC Showcase.',
+    technologies: ['Java', 'LibGDX', 'Box2D', 'Game Development', 'Project Leadership', 'Team Management', 'AI Programming']
   }
 ];
 
 export const leadership: Experience[] = [
-  {
-    id: 'gilded-flame-lead',
-    title: 'Project Lead – Gilded Flame',
-    company: 'Cornell University',
-    date: 'Cornell University',
-    description: 'I led a 9‑person team to develop a puzzle‑platformer game featuring dynamic light/shadow mechanics, torch‑throwing, enemy AI, and physics‑based collisions. I architected core gameplay systems in Java with LibGDX and Box2D and served as lead level designer, integrating assets and ensuring smooth platforming logic. Beyond coding, I bridged communication between programmers and artists, ran play‑testing sessions, and oversaw marketing and live demos at Cornell\'s GDIAC Showcase for 150+ attendees.',
-    technologies: ['Project Leadership', 'Team Coordination', 'Game Development', 'Java', 'LibGDX', 'Box2D', 'Level Design', 'Marketing', 'Event Management']
-  },
   {
     id: 'chess-tournament-lead',
     title: 'Tournament Lead',
@@ -84,25 +84,25 @@ export const skills: Skill[] = [
     id: 'programming-languages',
     category: 'Programming Languages',
     icon: '💻',
-    technologies: ['Java', 'JavaScript/TypeScript', 'Python', 'SQL', 'OCaml', 'HTML/CSS']
-  },
-            {
-            id: 'tools-frameworks',
-            category: 'Tools & Frameworks',
-            icon: '🛠️',
-            technologies: ['React', 'Next.js', 'Flask', 'Firebase', 'LibGDX', 'Box2D', 'Docker', 'Git', 'Supabase', 'AWS']
-          },
-  {
-    id: 'libraries-apis',
-    category: 'Libraries & APIs',
-    icon: '📚',
-    technologies: ['TensorFlow.js', 'NumPy', 'Pandas', 'OpenAI API', 'VAPI.ai', 'Pinecone']
+    technologies: ['Java', 'JavaScript', 'TypeScript', 'HTML/CSS/JS', 'Python', 'SQL', 'OCaml', 'C', 'C++', 'Kotlin', 'Rust']
   },
   {
-    id: 'design-dev-tools',
-    category: 'Design & Dev Tools',
+    id: 'frameworks-tools',
+    category: 'Frameworks & Tools',
+    icon: '🛠️',
+    technologies: ['React', 'Next.js', 'FastAPI', 'Node.js/Express', 'Firebase', 'Docker', 'Supabase', 'PostgreSQL', 'MongoDB', 'AWS (S3, RDS, EC2, Amplify)', 'Vercel', 'Render', 'TensorFlow.js', 'BERT', 'Pinecone', 'Ollama', 'Electron', 'JetPack Compose']
+  },
+  {
+    id: 'developer-tools',
+    category: 'Developer Tools',
+    icon: '🔧',
+    technologies: ['Git', 'VS Code', 'IntelliJ', 'Eclipse', 'Postman', 'Ubuntu/Linux', 'CI/CD (GitHub Actions, AWS Amplify)']
+  },
+  {
+    id: 'design-tools',
+    category: 'Design & UI',
     icon: '🎨',
-    technologies: ['Figma', 'VS Code', 'IntelliJ', 'Postman', 'Tailwind CSS']
+    technologies: ['Figma', 'Tailwind CSS', 'Framer Motion', 'UI/UX Design']
   }
 ];
 
@@ -111,13 +111,50 @@ export const education: Education = {
   institution: 'Cornell University',
   location: 'Ithaca, NY',
   degree: 'Bachelor of Arts in Computer Science',
-  date: 'Aug 2023 – May 2026 (expected)'
+  minor: 'Artificial Intelligence',
+  gpa: '3.7',
+  date: 'Aug 2023 – May 2027 (expected)',
+  relevantCoursework: [
+    'Data Structures',
+    'Functional Programming', 
+    'Analysis of Algorithms',
+    'Operating Systems',
+    'Computer Graphics',
+    'Game Design',
+    'Machine Learning',
+    'Computer System Organization',
+    'Backend Development',
+    'Android Development',
+    'Discrete Structures',
+    'Linear Algebra',
+    'Probability Models and Inference'
+  ],
+  teachingAssistant: {
+    role: 'Teaching Assistant – Data Structures & Functional Programming',
+    dates: 'Aug 2025 – Present',
+    responsibilities: [
+      'Lead discussion sessions for 40+ students',
+      'Hold weekly office hours for 30+ students',
+      'Collaborate with professor on assignments, projects, and exams',
+      'Assist students via Ed Discussion forums'
+    ]
+  },
+  researchAssistant: {
+    role: 'Research Assistant – Cornell SC Johnson College of Business',
+    dates: 'Sept 2025 – Present',
+    responsibilities: [
+      'Building a full-stack Beer Game for supply chain simulation with backend and interactive frontend',
+      'Developing AI agents and integrating LLMs for strategy analysis and decision emulation'
+    ]
+  }
 };
 
 export const contact: Contact = {
   email: 'hz639@cornell.edu',
+  phone: '713-380-8227',
   location: 'Ithaca, NY',
   github: 'https://github.com/harveyzhu27',
   linkedin: 'https://www.linkedin.com/in/zhuharvey',
+  portfolio: 'https://harvey-zhu.vercel.app',
   resume: '/assets/Harvey_Zhu_Resume.pdf'
 }; 

@@ -15,7 +15,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
-      whileHover={{ y: -10 }}
+      whileHover={{ y: -10, scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
     >
       <div className="h-48 bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center">
         {project.videoUrl ? (
@@ -43,14 +44,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
         
         <div className="flex items-center justify-between">
-          <a 
+          <motion.a 
             href={project.githubUrl} 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-primary-500 font-semibold hover:text-secondary-500 transition-colors"
+            whileHover={{ x: 5 }}
+            whileTap={{ scale: 0.95 }}
           >
             View Project →
-          </a>
+          </motion.a>
         </div>
         
         <div className="tech-tags">

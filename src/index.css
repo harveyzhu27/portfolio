@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   * {
@@ -28,12 +28,19 @@
   }
 
   .section-title {
-    @apply text-center text-4xl font-bold mb-12 text-gray-800 relative;
+    @apply text-center text-4xl font-bold mb-12 relative;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 
   .section-title::after {
     content: '';
-    @apply absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 rounded;
+    @apply absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-20 h-1 rounded;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
   }
 
   .tech-tags {
@@ -42,8 +49,11 @@
   }
 
   .tech-tag {
-    @apply bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-2 py-1 rounded-full text-xs font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg;
+    @apply text-white px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg cursor-default;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
   }
 
   .line-clamp-3 {
@@ -54,24 +64,39 @@
   }
 
   .project-card {
-    @apply bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+    @apply bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl relative;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    backdrop-filter: blur(10px);
+  }
+
+  .project-card::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-1;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   }
 
   .experience-item {
     @apply bg-white p-8 rounded-2xl shadow-lg mb-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl relative overflow-hidden;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    backdrop-filter: blur(10px);
   }
 
   .experience-item::before {
     content: '';
-    @apply absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 to-secondary-500;
+    @apply absolute top-0 left-0 right-0 h-1;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   }
 
   .skill-card {
     @apply bg-white p-8 rounded-2xl text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl relative overflow-hidden;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    backdrop-filter: blur(10px);
   }
 
   .skill-card-compact {
     @apply bg-white p-4 rounded-xl text-center shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative overflow-hidden;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    backdrop-filter: blur(10px);
   }
 
   .skill-card::before,
@@ -81,10 +106,102 @@
   }
 
   .cta-button {
-    @apply bg-white/20 text-white px-8 py-4 border-2 border-white rounded-full no-underline font-bold transition-all duration-300 opacity-0 animate-fade-in-up;
+    @apply text-white px-8 py-4 border-2 border-white rounded-full no-underline font-bold transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.2) 100%);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
   }
 
   .cta-button:hover {
-    @apply bg-white text-primary-500 -translate-y-0.5 shadow-xl;
+    @apply text-white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: transparent;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  }
+
+  .education-item {
+    @apply bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl relative overflow-hidden;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    backdrop-filter: blur(10px);
+  }
+
+  .education-item::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-1;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulse-glow {
+    from { box-shadow: 0 0 20px rgba(102, 126, 234, 0.3); }
+    to { box-shadow: 0 0 30px rgba(102, 126, 234, 0.6); }
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 16px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .project-card {
+      margin-bottom: 1rem;
+    }
+
+    .experience-item {
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .skill-card-compact {
+      padding: 1rem;
+    }
+
+    .tech-tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+    }
+
+    .cta-button {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.875rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 1.75rem;
+    }
+
+    .tech-tags {
+      gap: 0.5rem;
+    }
+
+    .tech-tag {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.4rem;
+    }
   }
 } 

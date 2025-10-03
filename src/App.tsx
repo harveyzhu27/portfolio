@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import ScrollToTop from './components/ScrollToTop';
 import { projects, experiences, leadership, skills, education, contact } from './data/portfolio';
 
 const App: React.FC = () => {
@@ -65,8 +66,8 @@ const App: React.FC = () => {
               Projects
             </motion.h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {projects.map((project, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+              {projects.map((project) => (
                 <div key={project.id}>
                   <div className="project-card">
                     <div className="h-40 bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center">
@@ -127,7 +128,7 @@ const App: React.FC = () => {
               Skills
             </motion.h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
               {skills.map((skill, index) => (
                 <motion.div
                   key={skill.id}
@@ -159,7 +160,7 @@ const App: React.FC = () => {
               Experience
             </motion.h2>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               {/* Work Experience Column */}
               <div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Work</h3>
@@ -224,7 +225,7 @@ const App: React.FC = () => {
         {/* Education & Contact Section */}
         <section id="education-contact" className="py-20">
           <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
               {/* Education Column */}
               <div>
                 <motion.h2 
@@ -244,14 +245,57 @@ const App: React.FC = () => {
                    transition={{ duration: 0.6 }}
                    viewport={{ once: true }}
                  >
-                   <div className="text-center mb-4">
+                   <div className="text-center mb-6">
                      <h3 className="text-2xl font-bold text-gray-800 mb-2">{education.institution}</h3>
-                     <p className="text-primary-500 font-bold text-sm">{education.location}</p>
+                     <p className="text-primary-500 font-bold text-sm mb-4">{education.location}</p>
+                     <h4 className="text-xl font-semibold text-gray-700 mb-2">{education.degree}</h4>
+                     <p className="text-gray-600 mb-2">{education.minor && `Minor: ${education.minor}`}</p>
+                     <p className="text-gray-600 mb-2">GPA: {education.gpa}</p>
+                     <p className="text-gray-600">{education.date}</p>
                    </div>
-                   <div className="text-center">
-                     <p className="font-bold text-gray-800 mb-2">{education.degree}</p>
-                     <p className="text-gray-600 text-sm">{education.date}</p>
-                   </div>
+                   
+                   {education.relevantCoursework && (
+                     <div className="mb-6">
+                       <h5 className="text-lg font-semibold text-gray-700 mb-3">Relevant Coursework</h5>
+                       <div className="flex flex-wrap gap-2">
+                         {education.relevantCoursework.map((course, index) => (
+                           <span key={index} className="tech-tag text-xs">
+                             {course}
+                           </span>
+                         ))}
+                       </div>
+                     </div>
+                   )}
+
+                   {education.teachingAssistant && (
+                     <div className="mb-6">
+                       <h5 className="text-lg font-semibold text-gray-700 mb-2">{education.teachingAssistant.role}</h5>
+                       <p className="text-sm text-gray-600 mb-3">{education.teachingAssistant.dates}</p>
+                       <ul className="text-sm text-gray-600 space-y-1">
+                         {education.teachingAssistant.responsibilities.map((resp, index) => (
+                           <li key={index} className="flex items-start">
+                             <span className="text-primary-500 mr-2">•</span>
+                             {resp}
+                           </li>
+                         ))}
+                       </ul>
+                     </div>
+                   )}
+
+                   {education.researchAssistant && (
+                     <div>
+                       <h5 className="text-lg font-semibold text-gray-700 mb-2">{education.researchAssistant.role}</h5>
+                       <p className="text-sm text-gray-600 mb-3">{education.researchAssistant.dates}</p>
+                       <ul className="text-sm text-gray-600 space-y-1">
+                         {education.researchAssistant.responsibilities.map((resp, index) => (
+                           <li key={index} className="flex items-start">
+                             <span className="text-primary-500 mr-2">•</span>
+                             {resp}
+                           </li>
+                         ))}
+                       </ul>
+                     </div>
+                   )}
                  </motion.div>
               </div>
 
@@ -276,6 +320,7 @@ const App: React.FC = () => {
                 >
                   <p className="text-lg text-gray-700 mb-2">📍 {contact.location}</p>
                   <p className="text-lg text-gray-700 mb-2">📧 {contact.email}</p>
+                  <p className="text-lg text-gray-700 mb-2">📞 {contact.phone}</p>
                   <p className="text-lg text-gray-700 mb-8">Ready to collaborate on exciting projects? Let's connect!</p>
                   
                   <div className="flex flex-wrap justify-center gap-4">
@@ -294,6 +339,14 @@ const App: React.FC = () => {
                       className="cta-button"
                     >
                       LinkedIn
+                    </a>
+                    <a 
+                      href={contact.portfolio} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="cta-button"
+                    >
+                      Portfolio
                     </a>
                     <a 
                       href={contact.resume} 
@@ -321,11 +374,13 @@ const App: React.FC = () => {
           </div>
           <p>&copy; 2025 Harvey Zhu. All rights reserved.</p>
           <p className="mt-2 text-sm text-gray-400">
-            <strong>Education:</strong> Cornell University — B.A. Computer Science (Aug 2023 – May 2026) |
-            <strong>Experience:</strong> Intern at Teidore (2025 – Present) | Project Lead – Gilded Flame
+            <strong>Education:</strong> Cornell University — B.A. Computer Science (Aug 2023 – May 2027) |
+            <strong>Experience:</strong> Software Engineering Intern at Hawl Technologies & Teidore (2025) | Project Lead – Gilded Flame
           </p>
         </div>
       </footer>
+      
+      <ScrollToTop />
     </div>
   );
 };
