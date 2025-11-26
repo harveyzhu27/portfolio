@@ -20,7 +20,7 @@ export const projects: Project[] = [
   {
     id: 'voice-support-chatbot',
     title: 'Voice-Enabled Support Chatbot',
-    description: 'Developed AI assistant with GPT-3.5, Pinecone embeddings, and confidence scoring. Implemented real-time voice interaction using Vapi and WebRTC. Created transcript processing pipeline for context-aware FAQ retrieval with intelligent, source-attributed answers.',
+    description: 'Built an AI-supported assistant with GPT-3.5, Pinecone-based semantic search, and confidence scoring. Implemented real-time voice interaction with Vapi + WebRTC and a transcript processing pipeline that drives context-aware FAQ retrieval and accurate, source-grounded responses.',
     githubUrl: 'https://github.com/harveyzhu27/ai-customer-support',
     videoUrl: '/assets/ai-voice-assistant-clip.mp4',
     technologies: ['TypeScript', 'Next.js', 'React', 'Pinecone', 'Vapi', 'WebRTC', 'GPT-3.5', 'Real-time Processing']
@@ -28,7 +28,7 @@ export const projects: Project[] = [
   {
     id: 'database-management-cli',
     title: 'Database Management CLI Tool',
-    description: 'Built CLI tool for schema generation, migrations, and routes. Automated backend integration with Drizzle ORM + PostgreSQL. Integrated OpenAI NLP to parse natural language into structured DB operations, fully automating feature creation for Next.js projects.',
+    description: 'Built a CLI tool that parses natural language prompts into database operations and project updates, automating backend workflows with Drizzle ORM + PostgreSQL and scaffolding API routes for modern Next.js projects.',
     githubUrl: 'https://github.com/harveyzhu27/database-subagent',
     technologies: ['TypeScript', 'PostgreSQL', 'Next.js', 'Drizzle ORM', 'CLI', 'OpenAI NLP', 'Database Automation']
   },
@@ -47,24 +47,24 @@ export const experiences: Experience[] = [
     title: 'Software Engineering Intern, Technical Lead',
     company: 'Hawl Technologies',
     date: 'Aug 2025 – Sept 2025',
-    description: 'Directed development of AI-powered enterprise search platform combining retrieval from 140+ trusted sources with multi-stage validation. Implemented secure RESTful API with JWT + user-provided key authentication, real-time streaming, and analytics. Engineered MongoDB Atlas schema with JSON validation, compound indexing, and encryption-at-rest.',
-    technologies: ['AI/ML', 'RESTful API', 'JWT Authentication', 'MongoDB Atlas', 'Real-time Streaming', 'Enterprise Search', 'Data Validation']
+    description: 'Directed development of an AI-powered enterprise search platform that reduced hallucinations by combining retrieval from 140+ trusted sources with multi-stage validation. Implemented secure RESTful API with dual authentication (JWT + user-provided keys), real-time streaming, and usage analytics while integrating SMTP via Resend and Vercel DNS for reliable deployment.',
+    technologies: ['Enterprise Search', 'Retrieval-Augmented Generation', 'JWT Authentication', 'RESTful API', 'Streaming APIs', 'Resend', 'Vercel']
   },
   {
     id: 'teidore',
     title: 'Software Engineering Intern',
     company: 'Teidore',
     date: 'Jun 2025 – Sept 2025',
-    description: 'Deployed automated CI/CD pipelines on AWS Amplify, EC2, and CloudWatch. Designed Python ETL pipeline migrating retailer data from AWS S3 to PostgreSQL RDS at 5,000+ records/min. Redesigned e-commerce schema with hierarchical categories and materialized views, reducing query latency by 40%. Built AI/ML pipelines with BERT and Ollama, improving classification accuracy by 125%.',
-    technologies: ['AWS', 'CI/CD', 'Python ETL', 'PostgreSQL', 'S3', 'RDS', 'BERT', 'Ollama', 'CloudWatch', 'Schema Design']
+    description: 'Engineered high-throughput ETL pipelines between AWS S3 and PostgreSQL RDS over secure TCP/IP connections, hitting 5,000+ records/minute. Identified bottlenecks in an e-commerce schema and redesigned it with hierarchical categories and materialized views to cut latency by 40%. Built BERT + Ollama pipelines for auto-classification, boosting accuracy by 125%.',
+    technologies: ['AWS S3', 'PostgreSQL RDS', 'ETL Pipelines', 'Schema Design', 'Materialized Views', 'BERT', 'Ollama']
   },
   {
     id: 'gilded-flame',
     title: 'Project Lead, Programmer, Artist',
     company: 'Gilded Flame',
     date: 'Jan 2025 – May 2025',
-    description: 'Led 9-person team to build a game with dynamic lighting, AI-driven enemies, and puzzle logic. Resolved production challenges and kept milestones on track. Presented final game to 150+ attendees at Cornell\'s GDIAC Showcase.',
-    technologies: ['Java', 'LibGDX', 'Box2D', 'Game Development', 'Project Leadership', 'Team Management', 'AI Programming']
+    description: 'Led a 9-person team to ship a game featuring dynamic lighting, AI-driven enemies, and complex puzzle logic within a single semester. Reallocated resources to resolve frontend/backend conflicts, maintained milestones, and presented the finished title to 150+ attendees at Cornell\'s GDIAC Showcase.',
+    technologies: ['Java', 'LibGDX', 'Box2D', 'Game Development', 'Team Leadership', 'Production Management']
   }
 ];
 
@@ -74,24 +74,16 @@ export const leadership: Experience[] = [
     title: 'Teaching Assistant – Data Structures & Functional Programming',
     company: 'Cornell University',
     date: 'Aug 2025 – Present',
-    description: 'Lead discussion sessions for 40+ students and hold weekly office hours for 30+ students. Collaborate with professor on assignments, projects, and exams. Assist students via Ed Discussion forums to ensure comprehensive understanding of core computer science concepts.',
-    technologies: ['Teaching', 'Student Mentoring', 'Course Development', 'Educational Technology', 'Problem Solving', 'Communication']
+    description: 'Lead discussion sections of 40+ students, hold weekly office hours supporting 30+ students, and partner with course staff to design assignments, projects, and exams while answering questions on Ed Discussion.',
+    technologies: ['Teaching', 'Student Mentoring', 'Curriculum Design', 'Ed Discussion', 'Communication']
   },
   {
     id: 'research-assistant',
     title: 'Research Assistant – Cornell SC Johnson College of Business',
     company: 'Cornell University',
-    date: 'Aug 2025 – Present',
-    description: 'Building a full-stack Beer Game for supply chain simulation with backend and interactive frontend. Developing AI agents and integrating LLMs for strategy analysis and decision emulation to enhance supply chain management education and research.',
-    technologies: ['Full-Stack Development', 'AI/ML', 'LLM Integration', 'Supply Chain Simulation', 'Research', 'Game Development']
-  },
-  {
-    id: 'chess-tournament-lead',
-    title: 'Tournament Lead – Cornell Chess Club',
-    company: 'Cornell University',
-    date: 'Aug 2025 – Present',
-    description: 'Managed tournament logistics and team coordination for national events including Pan American Collegiate, Inter Ivy, and Amateur Team East. Responsibilities included promoting tournaments, handling registrations and USCF compliance, coordinating travel and lodging, and serving as the primary liaison with tournament organizers to ensure smooth participation and reimbursement processes.',
-    technologies: ['Event Management', 'Logistics Coordination', 'Team Leadership', 'USCF Compliance', 'Travel Planning', 'Budget Management']
+    date: 'Sept 2025 – Present',
+    description: 'Build a full-stack Beer Game simulation with a Django backend, React frontend, and MySQL database plus token-based Canvas integration for course deployments. Implement multiplayer supply-chain logic with AI agents and LLM-based strategy evaluation paired with data visualizations for bullwhip and inventory insights.',
+    technologies: ['Django', 'React', 'MySQL', 'Canvas API', 'Supply Chain Simulation', 'LLM Integration']
   }
 ];
 
@@ -100,25 +92,25 @@ export const skills: Skill[] = [
     id: 'programming-languages',
     category: 'Programming Languages',
     icon: '💻',
-    technologies: ['Java', 'JavaScript', 'TypeScript', 'HTML/CSS/JS', 'Python', 'SQL', 'OCaml', 'C', 'C++', 'Kotlin', 'Rust']
+    technologies: ['Java', 'JavaScript', 'TypeScript', 'Python', 'SQL', 'OCaml', 'C/C++', 'Kotlin', 'Rust', 'HTML/CSS']
   },
   {
     id: 'frameworks-tools',
     category: 'Frameworks & Tools',
     icon: '🛠️',
-    technologies: ['React', 'Next.js', 'FastAPI', 'Node.js/Express', 'Firebase', 'Docker', 'Supabase', 'PostgreSQL', 'MongoDB', 'AWS (S3, RDS, EC2, Amplify)', 'Vercel', 'Render', 'TensorFlow.js', 'BERT', 'Pinecone', 'Ollama', 'Electron', 'JetPack Compose']
+    technologies: ['React', 'Next.js', 'FastAPI', 'Node.js/Express', 'Django', 'Firebase', 'Docker', 'Supabase', 'TensorFlow.js']
+  },
+  {
+    id: 'databases-cloud',
+    category: 'Databases & Cloud',
+    icon: '☁️',
+    technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'AWS (S3, RDS, EC2, Amplify)', 'Vercel', 'Render']
   },
   {
     id: 'developer-tools',
     category: 'Developer Tools',
     icon: '🔧',
-    technologies: ['Git', 'VS Code', 'IntelliJ', 'Eclipse', 'Postman', 'Ubuntu/Linux', 'CI/CD (GitHub Actions, AWS Amplify)']
-  },
-  {
-    id: 'design-tools',
-    category: 'Design & UI',
-    icon: '🎨',
-    technologies: ['Figma', 'Tailwind CSS', 'Framer Motion', 'UI/UX Design']
+    technologies: ['Git', 'VS Code', 'IntelliJ', 'Eclipse', 'Postman', 'Ubuntu/Linux', 'Unix', 'PowerShell', 'CI/CD']
   }
 ];
 
@@ -129,8 +121,9 @@ export const education: Education = {
   degree: 'Bachelor of Arts in Computer Science',
   minor: 'Artificial Intelligence',
   gpa: '3.7',
-  date: 'Aug 2023 – May 2027 (expected)',
+  date: 'Expected May 2027',
   relevantCoursework: [
+    'Object Oriented Programming',
     'Data Structures',
     'Functional Programming', 
     'Analysis of Algorithms',
